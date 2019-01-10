@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"type":null,"mount_options":["uid=1000","gid=1000"],"guestpath":"/vagrant","hostpath":"D:/www/laravel-vue-bulma","disabled":false,"__vagrantfile":true}}}
