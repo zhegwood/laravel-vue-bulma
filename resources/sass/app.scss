@@ -1,14 +1,49 @@
-
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
-// Variables
-@import 'variables';
+@import "~bulma/bulma";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+/********** Variables **********/
+$border-gray: #dbdbdb;
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+/********** Mixins **********/
+@mixin border-radius($tl, $tr, $br, $bl) {
+    -webkit-border-top-left-radius: $tl;
+    -webkit-border-top-right-radius: $tr;
+    -webkit-border-bottom-right-radius: $br;
+    -webkit-border-bottom-left-radius: $bl;
+    -moz-border-radius-topleft: $tl;
+    -moz-border-radius-topright: $tr;
+    -moz-border-radius-bottomright: $br;
+    -moz-border-radius-bottomleft: $bl;
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $bl;
+}
+
+/********** Helpers **********/
+.margin-bottom-1 {
+    margin-bottom: 1rem;
+}
+
+/********** Site Styles **********/
+.global-error {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 35;
+    .notification {
+        padding: 1rem 2.5rem 1rem 1.5rem;
+    }
+}
+.panel {
+    border: 1px solid $border-gray;
+    @include border-radius(4px, 4px, 4px, 4px);
+    padding: 1rem;
+}
+.terms-of-service {
+    max-height:300px;
 }
